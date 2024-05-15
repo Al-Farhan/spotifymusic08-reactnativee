@@ -33,7 +33,7 @@ function App(): React.JSX.Element {
   }
 
   useEffect(() => {
-    setup()
+    setup();
   }, [])
 
   if (!isPlayerReady) {
