@@ -12,6 +12,7 @@ import {
 } from 'react-native';
 
 import {setupPlayer, addTrack} from '../musicPlayerServices'
+import MusicPlayer from './screens/MusicPlayer';
 
 
 type SectionProps = PropsWithChildren<{
@@ -45,12 +46,10 @@ function App(): React.JSX.Element {
   }
 
   return (
-    <SafeAreaView>
-      <StatusBar />
-      <View>
-        <Text>Testing</Text>
-      </View>
-    </SafeAreaView>
+    <View style={styles.container}>
+      <StatusBar barStyle={"light-content"} />
+      <MusicPlayer />
+    </View>
   );
 }
 

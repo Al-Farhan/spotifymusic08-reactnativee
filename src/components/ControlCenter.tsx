@@ -17,8 +17,8 @@ const ControlCenter = () => {
     await TrackPlayer.skipToPrevious();
   };
 
-  const togglePlayBack = async (playback: State | { state: undefined }) => {
-    const currentTrack = await TrackPlayer.getCurrentTrack();
+  const togglePlayBack = async (playback: State) => {
+    const currentTrack = await TrackPlayer.getActiveTrackIndex();
 
     if (currentTrack !== null) {
       if (playback === State.Paused || playback === State.Ready) {
